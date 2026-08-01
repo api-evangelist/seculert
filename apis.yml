@@ -1,8 +1,25 @@
 aid: seculert
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/seculert.png
 name: Seculert
-description: 'Seculert is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Seculert was an Israeli cybersecurity company that provided cloud-based automated threat
+  and attack detection, analytics, and breach-detection services, correlating outbound traffic and threat
+  intelligence to identify compromised devices. Backed by Norwest Venture Partners, it was acquired by
+  Radware in January 2017 and folded into Radware''s cloud security portfolio; the independent seculert.com
+  brand is now defunct. This enrichment pass found no live independent API surface: the apex domain no
+  longer serves TLS, www.seculert.com redirects to a dead HubSpot landing page, and no /.well-known,
+  llms.txt, or developer/API documentation is published. Retained as a network profile of an acquired,
+  now-inactive provider; DNS records (DMARC ruf to dmarc@radware.com) corroborate the Radware ownership.'
 url: https://raw.githubusercontent.com/api-evangelist/seculert/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +29,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-status: defunct
+x-acquired-by: radware
+x-acquired-date: '2017-01'
 tags:
 - Company
-- Unknown
+- Cybersecurity
+- Threat Detection
+- Security
+- Analytics
+- Acquired
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +48,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/seculert-domain-security.yml
 - type: Website
   url: https://seculert.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
